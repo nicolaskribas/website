@@ -1,11 +1,13 @@
 # The URL the site will be built for
-base_url = "https://example.com"
+base_url = "https://koll.ing"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
+
+theme = "anemone"
 
 [markdown]
 # Whether to do syntax highlighting
@@ -14,3 +16,8 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+
+header_nav = [
+	{ url = "/", name_en = "/about/" },
+	{ url = "/blog", name_en = "/blog/" }
+]
