@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		{% if page.title %}
+			{% set title = page.title %}
+		{% elif section.title %}
+			{% set title = section.title %}
+		{% elif config.title %}
+			{% set title = config.title %}
+		{% endif %}
+		<title>{{ title }}</title>
+
+		<link rel="stylesheet" href={{ get_url(path="css/normalize.css") }}>
+		<link rel="stylesheet" href={{ get_url(path="css/magick.css") }}>
+		<link rel="stylesheet" href={{ get_url(path="css/style.css") }}>
+	</head>
+	<body>
+		<main>
+			<header>
+				<nav id="header-nav">
+					<a href={{ get_url(path="/") }}>about</a>
+					&nbsp;
+					<a href={{ get_url(path="/blog") }}>blog</a>
+					<!--&nbsp;-->
+					<!--<a href={{ get_url(path="/research") }}>research</a>-->
+					&nbsp;
+					<a href={{ get_url(path="cv.pdf") }}>resumé</a>
+				</nav>
+			</header>
+			{% block content %} {% endblock %}
+			<footer>
+			</footer>
+		</main>
+	</body>
+</html>
