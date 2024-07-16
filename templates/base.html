@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		{% if page.title %}
 			{% set title = page.title %}
@@ -29,7 +30,9 @@
 					<a href={{ get_url(path="cv.pdf") }}>resumé</a>
 				</nav>
 			</header>
-			{% block content %} {% endblock %}
+			<section>
+				{% block content %} {% endblock %}
+			</section>
 			<footer>
 			</footer>
 		</main>
